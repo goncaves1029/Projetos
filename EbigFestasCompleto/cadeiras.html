@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cama Elástica – Veja mais</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+
+    <link rel="stylesheet" href="styleTeste.css">
+    <script src="testeScript.js" defer></script>
+
+</head>
+
+<body>
+    <div id="mySidebar" class="sidebar">
+        <span class="close-btn" onclick="closeSidebar()">×</span>
+        <a href="home.html">Início</a>
+        <a id="navBarBtn" href="#">Serviços</a>
+        <a href="#">Contato</a>
+    </div>
+  
+
+  
+
+    <!-- Header -->
+    <header class="outrasPaginas">
+
+        <div class="container-outrasPaginas" style="padding: 1em;">
+            <nav class="nav-outrasPaginas">
+                <div class="brand-outrasPaginas">
+                    <!-- Substitua por seu logo -->
+                    <img class="img-outrasPaginas" src="fotos/Logo ebig transp.png" alt="Urso com chapéu de festa"
+                        style="width: 5em; height: 5em; ">
+                    <div class="title-outrasPaginas" id="ebifestas" style="padding: 1em;">EBIG FESTAS</div>
+
+
+
+                    <a href=""></a><img id="menuImg" src="fotos/open-menu.png" alt="menu" href="lateralbar.html"
+                        onclick="openSidebar()">
+
+                </div>
+
+
+
+                <div class="menu-outrasPaginas">
+                    <a href="home.html">Início</a>
+                    <a href="home.html">Galeria</a>
+                    <a href="#contato" class="cta-header-outrasPaginas">Solicitar orçamento</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+
+
+
+  <!-- ########################### TESTE CARRINHOS ############################################## -->
+
+
+  <div id="carrinho-icone" tabindex="0" aria-label="Abrir carrinho" role="button">
+    <div class="carrinho-svg">&#128722;</div>
+    <div id="contador-carrinho" class="contN">0</div>
+  </div>
+
+  <!-- Modal/Painel do carrinho -->
+  <div id="carrinho-modal" class="modal" aria-modal="true" role="dialog" aria-labelledby="titulo-carrinho"
+    aria-describedby="descricao-carrinho" tabindex="-1">
+    <div class="modal-conteudo">
+      <header class="header-carrinho">
+        <h2 id="titulo-carrinho">Seu produtos</h2>
+        <button id="fechar-carrinho" aria-label="Fechar carrinho">&times;</button>
+      </header>
+      <div id="descricao-carrinho" class="descricao">Disponibilidade: consulte o atendente.</div>
+      <ul id="lista-carrinho"></ul>
+      <div class="acoes-carrinho">
+        <a id="atendimentor-carrinho" href="home.html">Atendimento</a>
+
+        <button id="limpar-carrinho">Limpar Carrinho</button>
+      </div>
+    </div>
+    <div class="modal-overlay"></div>
+  </div>
+
+  <!-- Toast de feedback -->
+  <div id="toast" class="toast" aria-live="polite"></div>
+
+
+  <!-- ########################### END TESTE CARRINHOS ########################################## -->
+
+
+    <div class="container">
+        <div class="hero-outrasPaginas">
+            <div class="card section">
+                <!-- <span class="badge-outraspaginas">Diversão segura com monitor</span> -->
+                <h1 >Mesas e Cadeiras Plásticas</h1>
+                <p>Fácil de transportar e montar, ideal para eventos com logística dinâmica.</p>
+                <ul class="features">
+                    <li><strong>Ideal para: <br></strong>
+                        Festas de aniversário,
+                        Casamentos e recepções...
+                    </li>
+                    <li><strong>Higienezação: <br></strong> Realizada antes de cada evento com produtos antibacterianos.
+                        
+                    </li>
+                </ul>
+
+                
+                <div  class="cta" data-id="2" data-nome="Conjutos de Mesas e Cadeiras" data-preco="">
+
+                    <button  class="adicionar" id="btnpulapula"> Adicionar ao Carrinho
+                        <img src="fotos/carrinho-de-compras.png" alt="carriho de compras"
+                            style="width: 2em; height:2em;">
+                    </button>
+
+
+                    <button class="btn btn-outline">Falar no WhatsApp</button>
+                </div>
+            </div>
+            <div class="media card" id="mediaCardImg">
+                <!-- Substitua por sua imagem real -->
+                <img class="fotogaleryhome" src="fotos/Conjunto-de-Mesa-com-Cadeiras.jpg" alt="Cama elástica com rede de proteção e escadinha"  style="width: auto; height: calc();">
+            </div>
+        </div>
+
+        <div class="card section">
+            <h2>Especificações técnicas</h2>
+            <table>
+                <tr>
+                    <th>Formato da mesa</th>
+                    <td>Quadrada (geralmente 70x70 cm ou 90x90 cm)</td>
+                </tr>
+                <tr>
+                    <th>Resistência</th>
+                    <td>Suporta até 120 kg por cadeira</td>
+                </tr>
+                <tr>
+                    <th>Cor padrão</th>
+                    <td>Branco</td>
+                </tr>
+                <tr>
+                    <th>- Higiene garantida</th>
+                    <td>- impeza profissional antes da entrega, promovendo conforto e segurança aos convidados.</td>
+                </tr>
+                <tr>
+                    <!-- <th>Proteção</th>
+          <td>Almofadas nas molas e postes</td>
+        </tr>
+        <tr>
+          <th>Acesso</th>
+          <td>Escadinha 4 degraus</td>
+        </tr>
+        <tr>
+          <th>Peso suportado</th>
+          <td>Até 240 kg</td>
+        </tr>
+        <tr>
+          <th>Monitor</th>
+          <td>Incluído</td>
+        </tr> -->
+            </table>
+        </div>
+
+        <div class="grid-2">
+
+            <div class="card section">
+                <h2>Área de atendimento</h2>
+                <ul>
+                    <li><strong>Cidades:</strong> Macaíba, Natal, Parnamirim, São Gonçalo.</li>
+                    <li><strong>Observações Adicionais</strong> É possível solicitar quantidades personalizadas conforme
+                        o
+                        número de convidados.</li>
+                    <li><strong>Atenção!!!</strong> Recomenda-se reservar com antecedência em períodos de alta demanda
+                        (feriados e fins de semana).
+                    </li>
+                    <!-- <li><strong>Energia:</strong> não requer tomada.</li> -->
+                </ul>
+            </div>
+
+            <div class="card section">
+                <img src="fotos/caadeiras baiixo.png" alt="">
+            </div>
+        </div>
+
+        <!-- <div class="card section">
+      <h2>Pacotes e valores</h2>
+      <ul>
+        <li><strong>3 horas:</strong> R$ 240</li>
+        <li><strong>4 horas:</strong> R$ 290</li>
+        <li><strong>Hora extra:</strong> R$ 60</li>
+        <li><strong>Combo:</strong> -10% com outro brinquedo</li>
+      </ul>
+      <div class="cta">
+        <button class="btn btn-primary">Solicitar orçamento</button>
+        <button class="btn btn-outline">Ver disponibilidade</button>
+      </div>
+    </div> -->
+
+        <!-- <div class="card section">
+      <h2>Perguntas frequentes</h2>
+      <dl class="faq">
+        <dt>Quantas crianças por vez?</dt>
+        <dd>Uma por vez, com tempo controlado pelo monitor.</dd>
+        <dt>Pode usar em área externa?</dt>
+        <dd>Sim, em piso nivelado e sem ventos fortes.</dd>
+        <dt>E se chover?</dt>
+        <dd>Pausamos o uso por segurança e remanejamos o tempo.</dd>
+        <dt>Vocês emitem contrato?</dt>
+        <dd>Sim, com termos de segurança e responsabilidades.</dd>
+      </dl>
+    </div> -->
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="brand">
+                        <img src="fotos/Ebig-festa-logo.png" alt="Urso logo">
+                        <div class="title">EBIG FESTAS</div>
+                    </div>
+                    <p style="margin-top:12px;">Festas infantis personalizadas em Macaíba e região. Decoração,
+                        brinquedos e experiências mágicas.</p>
+                </div>
+                <div>
+                    <h4>Links</h4>
+                    <ul>
+                        <li><a href="#inicio">Início</a></li>
+                        <li><a href="#pacotes">Pacotes</a></li>
+                        <li><a href="#galeria">Galeria</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Políticas</h4>
+                    <ul>
+                        <li>Termos de serviço</li>
+                        <li>Política de privacidade</li>
+                        <li>Política de segurança</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="legal">© 2025 EBIG Festas. Todos os direitos reservados.</div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

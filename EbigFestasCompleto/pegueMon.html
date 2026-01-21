@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cama Elástica – Veja mais</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+
+    <link rel="stylesheet" href="styleTeste.css">
+  <script src="testeScript.js" defer></script>
+
+</head>
+
+<body>
+
+    <div id="mySidebar" class="sidebar">
+        <span class="close-btn" onclick="closeSidebar()">×</span>
+        <a href="home.html">Início</a>
+        <a id="navBarBtn" href="#">Serviços</a>
+        <a href="#">Contato</a>
+    </div>
+    
+
+<!-- ########################### TESTE CARRINHOS ############################################## -->
+
+
+  <div id="carrinho-icone" tabindex="0" aria-label="Abrir carrinho" role="button">
+    <div class="carrinho-svg">&#128722;</div>
+    <div id="contador-carrinho" class="contN">0</div>
+  </div>
+
+  <!-- Modal/Painel do carrinho -->
+  <div id="carrinho-modal" class="modal" aria-modal="true" role="dialog" aria-labelledby="titulo-carrinho"
+    aria-describedby="descricao-carrinho" tabindex="-1">
+    <div class="modal-conteudo">
+      <header class="header-carrinho">
+        <h2 id="titulo-carrinho">Seu produtos</h2>
+        <button id="fechar-carrinho" aria-label="Fechar carrinho">&times;</button>
+      </header>
+      <div id="descricao-carrinho" class="descricao">Disponibilidade: consulte o atendente.</div>
+      <ul id="lista-carrinho"></ul>
+      <div class="acoes-carrinho">
+        <a id="atendimentor-carrinho" href="home.html">Atendimento</a>
+
+        <button id="limpar-carrinho">Limpar Carrinho</button>
+      </div>
+    </div>
+    <div class="modal-overlay"></div>
+  </div>
+
+  <!-- Toast de feedback -->
+  <div id="toast" class="toast" aria-live="polite"></div>
+
+
+  <!-- ########################### END TESTE CARRINHOS ########################################## -->
+
+
+
+    <header class="outrasPaginas">
+
+        <div class="container-outrasPaginas" style="padding: 1em;">
+            <nav class="nav-outrasPaginas">
+                <div class="brand-outrasPaginas">
+                    <!-- Substitua por seu logo -->
+                    <img class="img-outrasPaginas" src="fotos/Logo ebig transp.png" alt="Urso com chapéu de festa"
+                        style="width: 5em; height: 5em; ">
+                    <div class="title-outrasPaginas" id="ebifestas" style="padding: 1em;">EBIG FESTAS</div>
+
+
+
+                    <a href=""></a><img id="menuImg" src="fotos/open-menu.png" alt="menu" href="lateralbar.html"
+                        onclick="openSidebar()">
+
+                </div>
+
+                <div class="menu-outrasPaginas">
+                    <a href="home.html">Início</a>
+                    <a href="#pacotes">Galeria</a>
+                    <a href="#contato" class="cta-header-outrasPaginas">Solicitar orçamento</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+
+    <div class="container">
+        <div class="hero-outrasPaginas">
+            <div class="card section">
+                <h1>Pegue e Monte – Móveis para Festa</h1>
+                <!-- <p>Estrutura reforçada, rede 360°, almofadas nas molas e monitor durante todo o evento.</p> -->
+                <ul class="features">
+                    <li><strong>Pronto para usar: <br> </strong> Não requer montagem complexa.</li>
+                    <li><strong> Versátil:<br></strong> Combina com diversos temas e estilos.</li>
+                    <li><strong>Compacto:<br></strong> Cabe em carros pequenos para retirada.</li>
+                    <li><strong>Econômico:<br></strong> Ótimo Custo-benefício.</li>
+                </ul>
+
+
+                <div class="cta" data-id="3" data-nome="Pegue e Monte." data-preco="" >
+                    <button class="adicionar" id="btnpulapula"> Adicionar ao Carrinho
+                        <img src="fotos/carrinho-de-compras.png" alt="carriho de compras"
+                            style="width: 2em; height:2em;">
+                    </button>
+
+
+                    <button class="btn btn-outline">Falar no WhatsApp</button>
+                </div>
+            </div>
+            <div class="media card" id="mediaCardImg">
+                <!-- Substitua por sua imagem real -->
+                <img  class="fotogaleryhome" src="fotos/pegue e monte.png" alt="Cama elástica com rede de proteção e escadinha"
+                     style="width: auto; height: calc();">
+            </div>
+        </div>
+
+        <div class="card section">
+            <h2>Sua festa completa com praticidade e estilo!</h2>
+            <table>
+                <tr>
+                    <th>Decorações DIY (faça você mesmo):</th>
+                    <td> Ideal para quem gosta de personalizar cada detalhe da festa com criatividade.</td>
+                </tr>
+                <tr>
+                    <th>Festas em casa ou salões pequenos:</th>
+                    <td>Compacto e versátil, se adapta a diferentes ambientes sem ocupar muito espaço.
+                    </td>
+                </tr>
+                <tr>
+                    <th>Eventos com montagem rápida:</th>
+                    <td>Praticidade garantida para quem precisa montar e desmontar em pouco tempo.
+                    </td>
+                </tr>
+                <tr>
+                    <th>Retirada e montagem simples, feita pelo próprio cliente:</th>
+                    <td>Fácil de transportar e instalar, perfeito para quem busca autonomia e economia.</td>
+                </tr>
+                <!-- <tr>
+                        <th>Proteção</th>
+                        <td>Almofadas nas molas e postes</td>
+                    </tr>
+                    <tr>
+                        <th>Acesso</th>
+                        <td>Escadinha 4 degraus</td>
+                    </tr>
+                    <tr>
+                        <th>Peso suportado</th>
+                        <td>Até 240 kg</td>
+                    </tr>
+                    <tr>
+                        <th>Monitor</th>
+                        <td>Incluído</td>
+                    </tr> -->
+            </table>
+        </div>
+
+        <div class="grid-2">
+            <div class="card section">
+                <h2>📜 Regras de Uso</h2>
+                <ul>
+                    <li><strong>Reserva antecipada:</strong> Os itens devem ser solicitados com antecedência</li>
+                    <li><strong>Conservação:</strong> É proibido colar, pintar ou aplicar materiais que danifiquem os
+                        móveis.</li>
+                    <li><strong>Responsabilidade:</strong> Qualquer dano ou perda será de responsabilidade do cliente.
+                    </li>
+                </ul>
+
+            </div>
+
+            <div class="card section">
+                <h2>Área de atendimento</h2>
+                <ul>
+                    <li><strong> Cidades:</strong> Macaíba, Natal, Parnamirim, São Gonçalo.</li>
+                    <li><strong> Observação:</strong> Retirada no local.
+                    <li><strong> Realizamos Entregas:</strong> Taxa de transporte pode variar conforme a distância.
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="brand">
+                        <img src="fotos/Ebig-festa-logo.png" alt="Urso logo">
+                        <div class="title">EBIG FESTAS</div>
+                    </div>
+                    <p style="margin-top:12px;">Festas infantis personalizadas em Macaíba e região. Decoração,
+                        brinquedos e experiências mágicas.</p>
+                </div>
+                <div>
+                    <h4>Links</h4>
+                    <ul>
+                        <li><a href="#inicio">Início</a></li>
+                        <li><a href="#pacotes">Pacotes</a></li>
+                        <li><a href="#galeria">Galeria</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Políticas</h4>
+                    <ul>
+                        <li>Termos de serviço</li>
+                        <li>Política de privacidade</li>
+                        <li>Política de segurança</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="legal">© 2025 EBIG Festas. Todos os direitos reservados.</div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

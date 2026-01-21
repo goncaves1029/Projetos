@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cama Elástica – Veja mais</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer> </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Fredoka:wght@400;600;700&display=swap"
+    rel="stylesheet">
+  
+
+    <link rel="stylesheet" href="styleTeste.css">
+    <script src="testeScript.js" defer></script>
+</head>
+
+<body>
+  <!-- <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+
+    .menu {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+
+      .menu-outrasPaginas {
+        grid-template-columns: 1fr;
+      }
+
+      .badge-outraspaginas {
+        padding: 0em;
+      }
+
+      .hero-outrasPaginas {
+        display: block;
+        flex-direction: row;
+        gap: 1em;
+      }
+
+
+      .nav-outrasPaginas {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .hero-outrasPaginas {
+        flex-direction: row;
+      }
+
+      .grid-2 {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+
+        /* justify-content: flex-start; */
+
+        /* position: absolute; */
+
+      }
+
+      #cardback {
+        list-style: none;
+      }
+
+      #mediaCardImg {
+        width: 25em;
+        height: 15em;
+      }
+
+      .cta {
+        flex-direction: row;
+      }
+
+      .footer-grid {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+      }
+
+
+
+      .menu-outrasPaginas {
+        display: none;
+      }
+
+
+      #menuImg {
+        border-radius: 10%;
+        box-shadow: none;
+        width: 2em;
+        height: 2em;
+        box-shadow: 2px 1px 1px rgba(0, 0, 0, 0.6);
+        border: 1px solid #d800f596;
+
+      }
+
+      #ebifestas {
+        /* font-size: 32px; */
+        color: rgb(0, 0, 0);
+        -webkit-text-stroke: 0.5px rgb(255, 255, 255);
+        /* largura e cor do contorno */
+        text-shadow:
+          1px 3px 10px #020001d4;
+      }
+
+      .outrasPaginas {
+        border-bottom-left-radius: 10%;
+        border-bottom-right-radius: 10%;
+      }
+
+      .brand-outrasPaginas {
+        position: fixed;
+        margin-right: 2em;
+        margin-left: 2em;
+
+      }
+
+
+
+
+
+      /* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$Teste lateral bar $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
+      /* Barra lateral oculta inicialmente */
+      .sidebar {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        backdrop-filter: blur(5px);
+        overflow-x: hidden;
+        transition: 0.3s;
+        padding-top: 7em;
+        z-index: 1000;
+        border-bottom-right-radius: 2em;
+        border-top-right-radius: 2em;
+        align-items: center;
+        border-right: #ff2f85 solid 2px;
+      }
+
+      #navBarBtn{
+        color: #fff;
+        background-color: #ff2f85;
+        border: 2px solid #fff;
+       
+      }
+
+       #navBarBtn:hover{
+        color: #ff2f85;
+        background-color: #fff;
+        border: 2px solid #ff2f85;
+      }
+
+      .sidebar a {
+        padding: 10px 20px;
+        text-decoration: none;
+        font-size: 18px;
+        color:#ff2f85;
+        display: block;
+        background-color: #ffffff;
+        margin: 2em;
+        border-radius: 2em;
+        border: #ff2f85 solid 2px;
+        box-shadow: 0 10px 20px #000;
+        text-shadow: 1px 1px 1px #000;
+        font-size: 1.2em;
+        text-align: center;
+        width: 8em;
+      }
+
+      .sidebar a:hover {
+        color: #fff;
+        background-color: #ff2f85;
+      }
+
+      .close-btn {
+         padding-top: 1em;
+        position: absolute;
+        top: 20px;
+        right: 25px;
+        font-size: 40px;
+        color: rgb(255, 255, 255);
+        text-shadow: 1px 1px 2px #000;
+        cursor: pointer;
+        
+      }
+
+  
+
+    }
+  </style> -->
+
+  <div id="mySidebar" class="sidebar">
+    <span class="close-btn" onclick="closeSidebar()">×</span>
+    <a href="home.html">Início</a>
+    <a id="navBarBtn" href="#">Serviços</a>
+    <a href="#">Contato</a>
+  </div>
+
+ 
+
+  <!-- Header -->
+  <header class="outrasPaginas">
+
+    <div class="container-outrasPaginas" style="padding: 1em;">
+      <nav class="nav-outrasPaginas">
+        <div class="brand-outrasPaginas">
+          <!-- Substitua por seu logo -->
+          <img class="img-outrasPaginas" src="fotos/Logo ebig transp.png" alt="Urso com chapéu de festa"
+            style="width: 5em; height: 5em; ">
+          <div class="title-outrasPaginas" id="ebifestas" style="padding: 1em;">EBIG FESTAS</div>
+
+
+
+          <a href=""></a><img id="menuImg" src="fotos/open-menu.png" alt="menu" href="lateralbar.html"
+            onclick="openSidebar()">
+
+        </div>
+
+
+
+        <div class="menu-outrasPaginas">
+          <a href="home.html">Início</a>
+          <a href="home.html">Galeria</a>
+          <a href="#contato" class="cta-header-outrasPaginas">Solicitar orçamento</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+
+
+ <!-- ########################### TESTE CARRINHOS ############################################## -->
+
+
+  <div id="carrinho-icone" tabindex="0" aria-label="Abrir carrinho" role="button">
+    <div class="carrinho-svg">&#128722;</div>
+    <div id="contador-carrinho" class="contN">0</div>
+  </div>
+
+  <!-- Modal/Painel do carrinho -->
+  <div id="carrinho-modal" class="modal" aria-modal="true" role="dialog" aria-labelledby="titulo-carrinho"
+    aria-describedby="descricao-carrinho" tabindex="-1">
+    <div class="modal-conteudo">
+      <header class="header-carrinho">
+        <h2 id="titulo-carrinho">Seu produtos</h2>
+        <button id="fechar-carrinho" aria-label="Fechar carrinho">&times;</button>
+      </header>
+      <div id="descricao-carrinho" class="descricao">Disponibilidade: consulte o atendente.</div>
+      <ul id="lista-carrinho"></ul>
+      <div class="acoes-carrinho">
+        <a id="atendimentor-carrinho" href="home.html">Atendimento</a>
+
+        <button id="limpar-carrinho">Limpar Carrinho</button>
+      </div>
+    </div>
+    <div class="modal-overlay"></div>
+  </div>
+
+  <!-- Toast de feedback -->
+  <div id="toast" class="toast" aria-live="polite"></div>
+
+
+  <!-- ########################### END TESTE CARRINHOS ########################################## -->
+
+
+
+  <div class="container">
+    <div class="hero-outrasPaginas">
+      <div class="card section">
+        <span class="badge-outraspaginas">Diversão segura com monitor</span>
+        <h1>Cama Elástica 3m</h1>
+        <p>Estrutura reforçada, rede 360°, almofadas nas molas e monitor durante todo o evento.</p>
+        <ul class="features">
+          <li><strong>Tamanho:</strong> 3,0 m</li>
+          <li><strong>Capacidade:</strong> 3 Crianças por vez, até 70 kg</li>
+          <li><strong>Montagem:</strong> 30–45 min</li>
+          <li><strong>Ideal para:</strong> Festas, escolas, condomínios</li>
+        </ul>
+
+        
+        <div class="cta" data-id="1" data-nome="Conjutos de Mesas e Cadeiras" data-preco="" >
+
+          <button class="adicionar" id="btnpulapula"> Adicionar ao Carrinho
+            <img src="fotos/carrinho-de-compras.png" alt="carriho de compras" style="width: 2em; height:2em;">
+          </button>
+
+
+          <button class="btn btn-outline">Falar no WhatsApp</button>
+        </div>
+      </div>
+      <div class="media card" id="mediaCardImg">
+        <!-- Substitua por sua imagem real -->
+        <img class="fotogaleryhome" src="fotos/36-cama-elástica.png" alt="Cama elástica com rede de proteção e escadinha"
+          style="width: auto; height: calc();">
+      </div>
+    </div>
+
+    <div class="card section">
+      <h2>Especificações técnicas</h2>
+      <table>
+        <tr>
+          <th>Diâmetro</th>
+          <td>3,0 m</td>
+        </tr>
+        <tr>
+          <th>Altura da rede</th>
+          <td>1,80 m</td>
+        </tr>
+        <tr>
+          <th>Estrutura</th>
+          <td>Aço galvanizado</td>
+        </tr>
+        <tr>
+          <th>Lona</th>
+          <td>Nylon de alta resistência</td>
+        </tr>
+        <tr>
+          <th>Proteção</th>
+          <td>Almofadas nas molas e postes</td>
+        </tr>
+        <tr>
+          <th>Acesso</th>
+          <td>Escadinha 4 degraus</td>
+        </tr>
+        <tr>
+          <th>Peso suportado</th>
+          <td>Até 240 kg</td>
+        </tr>
+        <tr>
+          <th>Monitor</th>
+          <td>Incluído</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="grid-2">
+      <div class="card section">
+        <h2>Segurança e regras</h2>
+        <ul id="cardback">
+          <li><strong>Um por vez:</strong> evita colisões e quedas.</li>
+          <li><strong>Sem objetos:</strong> bolsos vazios, sem óculos e brinquedos.</li>
+          <li><strong>Supervisão:</strong> monitor organiza filas e controla tempo.</li>
+          <li><strong>Calçados:</strong> uso descalço ou meia antiderrapante.</li>
+          <li><strong>Clima:</strong> pausa em caso de chuva forte ou ventos.</li>
+        </ul>
+        <p class="notice">Higienização e checagem de segurança realizadas antes do início.</p>
+      </div>
+
+      <div class="card section">
+        <h2>Área de atendimento</h2>
+        <ul id="cardback">
+          <li><strong>Cidades:</strong> Macaíba, Natal, Parnamirim, São Gonçalo.</li>
+          <li><strong>Espaço mínimo:</strong> 3,5 m × 3,5 m e piso nivelado.</li>
+          <li><strong>Acesso:</strong> corredores com 90 cm para transporte.</li>
+          <li><strong>Energia:</strong> não requer tomada.</li>
+        </ul>
+      </div>
+    </div>
+
+   
+    <div class="card section">
+      <h2>Perguntas frequentes</h2>
+      <dl class="faq">
+        <dt>Quantas crianças por vez?</dt>
+        <dd>Uma por vez, com tempo controlado pelo monitor.</dd>
+        <dt>Pode usar em área externa?</dt>
+        <dd>Sim, em piso nivelado e sem ventos fortes.</dd>
+        <dt>E se chover?</dt>
+        <dd>Pausamos o uso por segurança e remanejamos o tempo.</dd>
+        <dt>Vocês emitem contrato?</dt>
+        <dd>Sim, com termos de segurança e responsabilidades.</dd>
+      </dl>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="brand">
+            <img src="fotos/Ebig-festa-logo.png" alt="Urso logo">
+            <div class="title">EBIG FESTAS</div>
+          </div>
+          <p style="margin-top:12px;">Festas infantis personalizadas em Macaíba e região. Decoração, brinquedos e
+            experiências mágicas.</p>
+        </div>
+        <div>
+          <h4>Links</h4>
+          <ul>
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#pacotes">Pacotes</a></li>
+            <li><a href="#galeria">Galeria</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Políticas</h4>
+          <ul>
+            <li>Termos de serviço</li>
+            <li>Política de privacidade</li>
+            <li>Política de segurança</li>
+          </ul>
+        </div>
+      </div>
+      <div class="legal">© 2025 EBIG Festas. Todos os direitos reservados.</div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

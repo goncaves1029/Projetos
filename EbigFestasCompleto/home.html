@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EBIG Festas — Transforme sonhos em realidade</title>
+  <link rel="stylesheet" href="style.css">
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script src="script.js" defer></script>
+
+  <link rel="stylesheet" href="styleTeste.css">
+  <script src="testeScript.js" defer></script>
+
+  <!-- Fonte divertida e legível -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Fredoka:wght@400;600;700&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body>
+
+  <div id="mySidebar" class="sidebar">
+    <span class="close-btn" onclick="closeSidebar()">×</span>
+    <a href="#">Início</a>
+    <a id="navBarBtn" href="#">Serviços</a>
+    <a href="#">Contato</a>
+  </div>
+
+
+
+
+  <!-- Header -->
+  <header>
+    <div class="container" style="padding: 1em;">
+      <nav class="nav">
+        <div class="brand">
+          <!-- Substitua por seu logo -->
+          <img src="fotos/Logo ebig transp.png" alt="Urso com chapéu de festa" style="width: 5em; height: 5em; ">
+          <div class="title" style="padding: 1em;">EBIG FESTAS</div>
+
+        </div>
+        <div class="menu">
+          <a href="#">Início</a>
+          <a href="#galeria">Galeria</a>
+          <a href="#" class="cta-header">Solicitar orçamento</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+
+
+  <!-- ########################### TESTE CARRINHOS ############################################## -->
+
+
+  <div id="carrinho-icone" tabindex="0" aria-label="Abrir carrinho" role="button">
+    <div class="carrinho-svg">&#128722;</div>
+    <div id="contador-carrinho" class="contN">0</div>
+  </div>
+
+  <!-- Modal/Painel do carrinho -->
+  <div id="carrinho-modal" class="modal" aria-modal="true" role="dialog" aria-labelledby="titulo-carrinho"
+    aria-describedby="descricao-carrinho" tabindex="-1">
+    <div class="modal-conteudo">
+      <header class="header-carrinho">
+        <h2 id="titulo-carrinho">Seu produtos</h2>
+        <button id="fechar-carrinho" aria-label="Fechar carrinho">&times;</button>
+      </header>
+      <div id="descricao-carrinho" class="descricao">Disponibilidade: consulte o atendente.</div>
+      <ul id="lista-carrinho"></ul>
+      <div class="acoes-carrinho">
+        <a id="atendimentor-carrinho" href="home.html">Atendimento</a>
+
+        <button id="limpar-carrinho">Limpar Carrinho</button>
+      </div>
+    </div>
+    <div class="modal-overlay"></div>
+  </div>
+
+  <!-- Toast de feedback -->
+  <div id="toast" class="toast" aria-live="polite"></div>
+
+
+  <!-- ########################### END TESTE CARRINHOS ########################################## -->
+
+
+  <!-- Hero -->
+  <section id="inicio" class="hero">
+    <div class="container">
+      <div>
+        <h1>Transforme sonhos em realidade</h1>
+        <p>Criamos festas infantis mágicas e inesquecíveis. Da decoração aos brinquedos, cuidamos de tudo com carinho e
+          criatividade.</p>
+        <div class="#">
+          <a href="#" class="btn btn-primary" id="testebtn" data-text="Em Breve">Monte sua festa</a>
+          <a href="#" class="btn btn-ghost" id="testebtn" data-text="Em Breve">Ver pacotes</a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="child-photo" aria-label="Criança sorrindo com balões pastéis"></div>
+        <!-- <img class="fotoCanto" src="fotos/testescanto.jpg" alt=""> -->
+         
+        <video class="fotoCanto" autoplay muted loop playsinline id="video-background">
+        <source  src="fotos/video.mp4" type="video/mp4">
+        Seu navegador não suporta vídeos HTML5.
+        </video>
+
+        <!-- Teste###################################################################################### -->
+
+
+        <style>
+           .fotoCanto {
+            width: 30em;
+            height: 40em;
+            border-radius: 10%;
+            object-fit: cover;
+
+            box-shadow: 0px 10px 25px rgba(38, 29, 29, 0378);
+          }
+        </style>
+
+
+
+        <!-- Teste###################################################################################### -->
+
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- Pacotes e combos -->
+  <section id="pacotes">
+    <div class="container">
+      <h2 class="section-title">Tenha o que precisa, quando precisa, <br> alugue nossos produtos!</h2>
+      <p class="section-sub">Escolha entre os brinquedos mais queridos das crianças e personalize sua combinação.</p>
+
+      <div class="cards">
+        <!-- Cama Elástica -->
+        <article class="card">
+          <div class="card-header" style="text-align: center;">
+            <img class="camaElastica" id="zoomImg" src="fotos/36-cama-elástica.png" alt="Cama elástica colorida"
+              style="width:150px; height:150px; display: flexbox;">
+
+          </div>
+          <div class="card-body" data-id="1" data-nome="Cama Elástica" data-preco="">
+            <div class="card-title">Cama Elástica</div>
+            <div class="card-desc">Diversão segura com estrutura reforçada e monitoramento durante o evento.</div>
+            <div class="card-actions">
+              <a href="camaElastica.html" class="btn btn-primary">Ver mais</a>
+              <button class="adicionar">Adicionar</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Cadeiras -->
+        <article class="card">
+          <div class="card-header" style="text-align: center;">
+            <img id="zoomImg" src="fotos/messas 2.jpg" alt="Mesas e Cadeiras" style="width:150px; height:150px;">
+          </div>
+          <div class="card-body" data-id="2" data-nome="Conjutos de Mesas e Cadeiras" data-preco="">
+            <div class="card-title">Mesas e Cadeiras</div>
+            <div class="card-desc"> Conforto para seus convidados, sempre higienizadas antes do evento.</div>
+            <div class="card-actions">
+              <a href="cadeiras.html" class="btn btn-primary">Ver mais</a>
+              <button class="adicionar">Adicionar</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- pegue e monte -->
+        <article class="card">
+          <div class="card-header" style="text-align: center;">
+            <img id="zoomImg" src="fotos/pegue e monte.png" alt="Móveis para Festa" style="width:150px; height:150px;">
+          </div>
+          <div class="card-body" data-id="3" data-nome="Pegue e Monte" data-preco="">
+            <div class="card-title">Pegue e Monte</div>
+            <div class="card-desc">Sua festa completa com móveis prontos para usar!</div>
+            <div class="card-actions">
+              <a href="pegueMon.html" class="btn btn-primary">Ver mais</a>
+              <button class="adicionar">Adicionar</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sobre nós -->
+  <section id="sobre">
+    <div class="container">
+      <h2 class="section-title">Sobre nós</h2>
+      <div class="about">
+        <div class="about-photo" style="text-align: center;">
+          <div class="badge">JOÃO HENRY — 5 anos</div>
+          <img class="fotogaleryhome" src="fotos/toystore.png" alt=" aniversariotoystore"
+            style="height: 500px; width: 400px;">
+        </div>
+        <div>
+          <p>Na EBIG Festas, temos paixão por criar festas infantis personalizadas que encantam. Estamos prontos para
+            transformar sonhos em realidade e tornar cada celebração um momento único.</p>
+          <ul>
+            <li><strong>Experiência:</strong> Equipe criativa e organizada, focada em segurança e alegria.</li>
+            <li><strong>Personalização:</strong> Temas, cores e ambientes pensados a partir da sua ideia.</li>
+            <li><strong>Do início ao fim:</strong> Do projeto à execução, você aproveita enquanto cuidamos de tudo.</li>
+          </ul>
+          <div class="actions" style="margin-top: 16px;">
+            <a href="#galeria" class="btn btn-primary" id="btnpulapula">Ver galeria</a>
+            <!-- <a href="#contato" class="btn btn-primary">Solicitar orçamento</a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal -->
+  <div id="img-modal" class="modal" aria-hidden="true" role="dialog">
+    <span class="close" aria-label="Fechar">×</span>
+    <img class="modal-content" id="modal-img" alt="">
+  </div>
+
+  <!-- Galeria -->
+  <section id="galeria">
+    <div class="container">
+      <h2 class="section-title">Galeria</h2>
+      <p class="section-sub">Um pouquinho do que já realizamos. Inspire-se para sua próxima festa.</p>
+      <div class="gallery" style="text-align: center;">
+        <img class="fotogaleryhome" id="fotogaleryhome1" src="fotos/foto1.png" alt="Mesa decorada com tema infantil">
+        <img class="fotogaleryhome" src="fotos/foto2.png" alt="Bolo temático colorido">
+        <img class="fotogaleryhome" src="fotos/foto3.png" alt="Balões e painel personalizado">
+        <img class="fotogaleryhome" src="fotos/foto4.png" alt="Parquinho e brinquedos infláveis">
+        <img class="fotogaleryhome" src="fotos/foto5.png" alt="Docinhos personalizados">
+        <img class="fotogaleryhome" src="fotos/foto6.png" alt="Cama elástica e área kids">
+        <img class="fotogaleryhome" src="fotos/foto7.png" alt="Detalhes de decoração com estrelas">
+        <img class="fotogaleryhome" src="fotos/foto8.png" alt="Mesa de convidados com decoração temática">
+      </div>
+    </div>
+  </section>
+
+  <div class="contact-card">
+    <h3 style="margin-top:0;">Informações de contato</h3>
+
+    <ul>
+      <a id="instagram" href="https://www.instagram.com/ebig.festas" style="display: flex; align-items: center; ">
+        <li>
+          <b>Instagram:</b>
+        </li>
+        <img id="contatosIMG" src="fotos/insta.jpg" alt="Instagram">
+      </a>
+
+      <li><strong>Email:</strong> contato@ebigfestas.com.br</li>
+      <li><strong>Atendemos:</strong> Macaíba, Natal, Parnamirim, São Gonçalo.</li>
+      <li><strong>Local:</strong> Macaíba, Rio Grande do Norte</li>
+    </ul>
+    <div style="height: 220px; border-radius: 12px; overflow: hidden; margin-top: 12px;">
+      <!-- Mapa incorporado (exemplo) -->
+      <iframe title="Mapa Macaíba" src="https://www.google.com/maps?q=Maca%C3%ADba%20RN&output=embed" width="100%"
+        height="220" style="border:0"></iframe>
+    </div>
+  </div>
+  </div>
+  </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="brand">
+            <img src="fotos/Ebig-festa-logo.png" alt="Urso logo">
+            <div class="title">EBIG FESTAS</div>
+          </div>
+          <p style="margin-top:12px;">Festas infantis personalizadas em Macaíba e região. Decoração, brinquedos e
+            experiências mágicas.</p>
+        </div>
+        <div>
+          <h4>Links</h4>
+          <ul>
+            <li><a href="home.html">Início</a></li>
+            <li><a href="#pacotes">Pacotes</a></li>
+            <li><a href="#galeria">Galeria</a></li>
+            <li><a href="#instagram">Contato</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Políticas</h4>
+          <ul>
+            <li>Termos de serviço</li>
+            <li>Política de privacidade</li>
+            <li>Política de segurança</li>
+          </ul>
+        </div>
+      </div>
+      <div class="legal">© 2025 EBIG Festas. Todos os direitos reservados.</div>
+    </div>
+  </footer>
+
+  <script>
+
+    function openSidebar() {
+      document.getElementById("mySidebar").style.width = "250px";
+    }
+
+    function closeSidebar() {
+      document.getElementById("mySidebar").style.width = "0";
+    }
+
+    // Rolagem suave para âncoras
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const id = a.getAttribute('href').slice(1);
+        const el = document.getElementById(id);
+        if (el) {
+          e.preventDefault();
+          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
