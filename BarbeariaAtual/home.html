@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <title>Agendamento - Barbearia Rom du Corte</title>
+</head>
+
+<script>
+// document.getElementById("data").addEventListener("input", function () {
+//   const dataSelecionada = new Date(this.value);
+//   const diaSemana = dataSelecionada.getDay(); // 0 = domingo, 1 = segunda, ..., 6 = sábado
+
+//   if (diaSemana === 0 || diaSemana === 1) {
+//     alert("⚠️ Domingos e segundas não estão disponíveis para agendamento.");
+//     this.value = ""; // limpa o campo
+//   }
+// });
+</script>
+
+<body>
+ 
+  <header>
+     <img class="admin" name="admin" src="./fotos/menu-suspenso.jpg" width="45px "
+     onclick="alerts()">
+
+    <img class="logo" src="fotos/logobarber.jpg" alt="Logo da Barbearia">
+    <div class="texto">
+      <h1>Barbearia Rom du Corte</h1>
+      <p>Agende seu corte com estilo</p>
+    </div>
+    
+
+  </header>
+
+  <div class="container">
+    <h2>Agendamento de Corte</h2>
+    <form id="form-agendamento">
+  <label for="nome">Nome:</label>
+  <input type="text" id="nome" name="nome" required>
+
+  <label for="servico">Serviço:</label>
+  <select id="servico" name="servico" required>
+    <option value="">Selecione</option>
+    <option value="Corte Social">Corte Social</option>
+    <option value="Degrade Navalhado">Degrade Navalhado</option>
+    <option value="Degrade na Zero">Degrade na Zero</option>
+    <option value="Sobrancelhas">Sobrancelhas</option>
+    <option value="Pigmentação">Pigmentação</option>
+    <option value="Barba">Barba</option>
+  </select>
+
+  <label for="data">Escolha uma data:</label>
+  <input type="date" id="data" name="data" required>
+
+  <label for="hora">Horário:</label>
+  <select id="hora" name="hora" required>
+    <!-- <option value="">Selecione</option> -->
+  </select>
+
+  <button type="submit">Agendar</button>
+</form>
+    <!-- <form id="form-agendamento" method="POST" action="agendar.php">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required>
+
+      <label for="servico">Serviço:</label>
+      <select id="servico" name="servico" required>
+        <option value="">Selecione</option>
+        <option value="Corte Social">Corte Social</option>
+        <option value="Degrade Navalhado">Degrade Navalhado</option>
+        <option value="Degrade na Zero">Degrade na Zero</option>
+        <option value="Sobrancelhas">Sobrancelhas</option>
+        <option value="Pigmentação">Pigmentação</option>
+        <option value="Barba">Barba</option>
+      </select>
+
+      <label for="data">Escolha uma data:</label>
+      <input type="date" id="data" name="data" required>
+
+      <label for="hora">Horário:</label>
+      <select id="hora" name="hora" required>>
+        <option value="">Selecione</option>
+      
+        <option value="09:00">09:00</option>
+        <option value="09:30">09:30</option>
+        <option value="10:00">10:00</option>
+        <option value="10:30">10:30</option>
+        <option value="11:00">11:00</option>
+        <option value="11:30">11:30</option>
+        <option value="12:00">12:00</option>
+        <option value="12:30">12:30</option>
+        <option value="14:00">14:00</option>
+        <option value="14:30">14:30</option>
+        <option value="15:00">15:00</option>
+        <option value="15:30">15:30</option>
+        <option value="16:00">16:00</option>
+        <option value="16:30">16:30</option>
+        <option value="17:00">17:00</option>
+        <option value="17:30">17:30</option>
+
+      </select>
+
+      <button type="submit">Agendar</button>
+    </form> -->
+  </div>
+
+
+
+<script>
+document.getElementById("data").addEventListener("change", function () {
+  const dataSelecionada = this.value;
+  const horaSelect = document.getElementById("hora");
+
+  fetch(`horarios.php?data=${dataSelecionada}`)
+    .then(response => response.json())
+    .then(horarios => {
+      horaSelect.innerHTML = '<option value="">Selecione</option>';
+      horarios.forEach(hora => {
+        const option = document.createElement("option");
+        option.value = hora;
+        option.textContent = hora;
+        horaSelect.appendChild(option);
+      });
+    })
+    .catch(error => {
+      console.error("Erro ao carregar horários:", error);
+    });
+
+});
+</script>
+</body>
+
+
+</html>

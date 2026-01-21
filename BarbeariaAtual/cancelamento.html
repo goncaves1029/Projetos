@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Painel de Agendamentos</title>
+  <link rel="stylesheet" href="cancelarStyle.css">
+  <!-- <style>
+    body { font-family: Arial, sans-serif; padding: 20px; background-color: #f9f9f9; }
+    h2 { color: #333; }
+    table { border-collapse: collapse; width: 100%; margin-top: 20px; }
+    th, td { border: 1px solid #ccc; padding: 10px; text-align: left; }
+    th { background-color: #eee; }
+    a.cancelar { color: red; font-weight: bold; text-decoration: none; }
+    a.cancelar:hover { text-decoration: underline; }
+  </style> -->
+</head>
+<body>
+  <h2>Agendamentos em Tempo Real</h2>
+  <table>
+    <tr>
+      <th>Nome</th>
+      <th>Telefone</th>
+      <th>Data</th>
+      <th>Hora</th>
+      <th>Ação</th>
+    </tr>
+   
+    <tr>
+      <td><?= htmlspecialchars($row['nome']) ?></td>
+      <td><?= htmlspecialchars($row['telefone']) ?></td>
+      <td><?= date("d/m/Y", strtotime($row['data_hora'])) ?></td>
+      <td><?= $row['time'] ?></td>
+      <td id="cancelarBtn" ><a  class="cancelar" href="?cancelar=<?= $row['id_agendamento'] ?>" onclick="return confirm('Cancelar este agendamento?')">Cancelar</a></td>
+    </tr>
+  
+
+
+
+  </table>
+</body>
+</html>

@@ -1,0 +1,62 @@
+  body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #302f2f;
+  }
+
+  h2 {
+      color: #f7cb07;
+  }
+
+  table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 20px;
+     
+  }
+
+  th,
+  td {
+      border: 1px solid #ffe607;
+      padding: 10px;
+      text-align: center;
+      background-color: #e9e9e9;
+  }
+
+  th {
+      background-color: #fefefe;
+      
+  }
+
+
+#cancelarBtn {
+  position: relative;
+  padding: 0;
+   font-size: 1.1rem;
+  font-weight: 600;
+  color: #f80000;
+  background: none;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+
+#cancelarBtn {
+  border: 2px solid rgba(251, 255, 0, 0.5);
+  background: rgba(255, 0, 0, 0.293);
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.525);
+  backdrop-filter: blur(5px);
+  text-align: center;
+  width: 10em;
+  height: 2em;
+}
+
+.cancelar{
+  color: #5b5454;
+  text-decoration: none;
+  text-align: center;
+
+}
+
+  
