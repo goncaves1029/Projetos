@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Registros de Combustível</title>
+
+  <style>
+/* Tema: verde-limão com fundo preto */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #000000; /* fundo preto */
+  color: #e6ffe6;      /* texto claro para contraste */
+  padding: 20px;
+}
+
+/* Card principal com leve contraste sobre o fundo preto */
+.card {
+  max-width: 1100px;
+  margin: 0 auto;
+  background: #07120a; /* quase preto, sutilmente verde escuro */
+  padding: 18px;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(174, 255, 0, 0.06);
+}
+
+/* Título em verde-limão */
+h1 {
+  margin: 0 0 8px;
+  color: #cddc39; /* verde-limão */
+}
+
+/* Tabela com linhas e cabeçalho em tons de limão */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+  color: #e6ffe6;
+}
+
+th, td {
+  padding: 8px;
+  border-bottom: 1px solid rgba(205, 220, 57, 0.08);
+  text-align: left;
+  font-size: 13px;
+}
+
+th {
+  background: rgba(205, 220, 57, 0.06); /* cabeçalho suave limão */
+  color: #d6ff6a; /* texto do cabeçalho em tom claro de limão */
+}
+
+/* Ações e botões com destaque limão */
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+button {
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 0;
+  cursor: pointer;
+  color: #07120a;
+  background: #cddc39; /* botão padrão limão */
+  transition: transform .08s ease, box-shadow .08s ease;
+}
+button:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(205,220,57,0.12); }
+
+/* Botão excluir em vermelho para contraste */
+.btn-delete {
+  background: #c62828;
+  color: #fff;
+}
+
+/* Botão limpar em verde-limão escuro */
+.btn-clear {
+  background: #9bbf1f;
+  color: #07120a;
+}
+
+/* Botão voltar com borda e fundo translúcido */
+.btn-back {
+  background: rgba(205,220,57,0.08);
+  color: #d6ff6a;
+  padding: 8px 10px;
+  border-radius: 6px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid rgba(205,220,57,0.12);
+}
+
+/* Botão editar em tom limão mais escuro */
+.btn-edit {
+  background: #9bbf1f;
+  color: #07120a;
+  padding: 6px 8px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+/* Texto secundário em tom verde suave */
+.muted {
+  color: #9fcf5a;
+  font-size: 13px;
+}
+
+/* Mensagem de lista vazia */
+.empty {
+  padding: 18px;
+  color: #9fcf5a;
+}
+
+/* Rodapé (fundo preto sólido) */
+.footer {
+  margin-top: 18px;
+  padding: 12px;
+  background: #000000;
+  color: #cddc39;
+  text-align: center;
+  border-top: 1px solid rgba(205,220,57,0.06);
+  border-radius: 6px;
+}
+
+/* Responsividade */
+@media(max-width:900px) {
+  table { font-size: 12px; }
+  .card { padding: 14px; }
+}
+</style>
+</head>
+<body>
+  <main class="card">
+    <h1>Registros Salvos</h1>
+    <p class="muted">Lista de registros gravados localmente no navegador. Você pode editar, excluir itens individualmente ou limpar todos.</p>
+
+    <div style="display:flex;gap:8px;margin-top:8px">
+      <a href="index.html" class="btn-back">Voltar ao formulário</a>
+      <button id="limparTudo" class="btn-clear">Limpar todos</button>
+    </div>
+
+    <div id="listaContainer"></div>
+  </main>
+
+ <script>
+function formatBR(value){
+  if (value === null || value === undefined || isNaN(value)) return '-';
+  return Number(value).toFixed(2).replace('.', ',');
+}
+
+function carregarRegistros(){
+  fetch('lista.php')
+    .then(res => res.json())
+    .then(arr => {
+      const container = document.getElementById('listaContainer');
+      container.innerHTML = '';
+
+      if (!arr.length){
+        container.innerHTML = '<div class="empty">Nenhum registro encontrado.</div>';
+        return;
+      }
+
+      const table = document.createElement('table');
+      const thead = document.createElement('thead');
+      thead.innerHTML = `<tr>
+        <th>Data</th>
+        <th>Km inicial</th>
+        <th>Km final</th>
+        <th>Km rodados</th>
+        <th>Consumo (L)</th>
+        <th>Gasto (R$)</th>
+        <th>Diária (R$)</th>
+        <th>Lucro (R$)</th>
+        <th>Ações</th>
+      </tr>`;
+      table.appendChild(thead);
+
+      const tbody = document.createElement('tbody');
+
+      arr.sort((a,b)=>b.id - a.id);
+
+      arr.forEach(reg => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td>${reg.data || ''}</td>
+          <td>${reg.km_inicial}</td>
+          <td>${reg.km_final}</td>
+          <td>${formatBR(reg.km_rodados)}</td>
+          <td>${reg.consumo_estimado !== undefined ? formatBR(reg.consumo_estimado) : '-'}</td>
+          <td>R$ ${formatBR(reg.gasto_combustivel)}</td>
+          <td>R$ ${formatBR(reg.diaria)}</td>
+          <td>R$ ${formatBR(reg.lucro_liquido)}</td>
+          <td class="actions">
+            <a href="inicio.html?editId=${reg.id}" class="btn-edit" style="padding:6px 8px;border-radius:6px;color:#fff;text-decoration:none">Editar</a>
+            <button data-id="${reg.id}" class="btn-delete">Excluir</button>
+          </td>
+        `;
+        tbody.appendChild(tr);
+      });
+
+      table.appendChild(tbody);
+      container.appendChild(table);
+
+      container.querySelectorAll('.btn-delete').forEach(btn => {
+        btn.addEventListener('click', function(){
+          const id = Number(this.getAttribute('data-id'));
+          excluirRegistro(id);
+        });
+      });
+    });
+}
+
+function excluirRegistro(id){
+  if (!confirm('Excluir este registro?')) return;
+  fetch(`delete.php?id=${id}`)
+    .then(res => res.text())
+    .then(msg => {
+      alert(msg);
+      carregarRegistros();
+    });
+}
+
+function limparTudo(){
+  if (!confirm('Deseja realmente excluir todos os registros? Esta ação não pode ser desfeita.')) return;
+  fetch('delete.php?all=1')
+    .then(res => res.text())
+    .then(msg => {
+      alert(msg);
+      carregarRegistros();
+    });
+}
+
+document.getElementById('limparTudo').addEventListener('click', limparTudo);
+
+carregarRegistros();
+</script>
+</body>
+</html>
