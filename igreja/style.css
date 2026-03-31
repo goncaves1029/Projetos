@@ -1,0 +1,329 @@
+/* estilo.css */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #111; 
+    color: #f5f5f5;  
+}
+
+
+h1, h2, h3 {
+    text-align: center;
+    color: #FFD700; /* dourado */
+}
+
+.grafico{
+    padding-top: 2em;
+    padding-left: 7em;
+    padding-right: 7em;
+    font-weight: 300;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+    border-radius: 10px;
+    /* border: #FFD700 3px solid; */
+}
+
+#result{
+    max-width: 600px;
+    margin: 20px auto;
+    /* background: #8f0505; */
+    backdrop-filter: blur(8px);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+    text-align: center;
+}
+
+
+#ero{
+ text-align: center;
+ margin-left:15% ;
+ margin-right: 15%;
+  backdrop-filter: blur(8px);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+    justify-items: center;
+}
+
+
+form {
+    max-width: 600px;
+    margin: 20px auto;
+    /* background: #8f0505; */
+    backdrop-filter: blur(8px);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #FFD700;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input, select {
+    background: #333;
+    color: #fff;
+}
+
+button {
+    background: #FFD700;
+    color: #111;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #fff;
+    color: #111;
+}
+
+
+
+#whats{
+   background: #04ff00;
+    color: #111;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#whats:hover {
+    background: #fff;
+    color: #111;
+}
+
+
+#PgLog{
+       background: #FFD700;
+    color: #111;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    padding:  0.6em 8em;
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px;
+    margin-left: 19% ;
+    
+}
+
+
+#PgLog:hover {
+    background: #fff;
+    color: #111;
+}
+
+#PgLo{
+       background: #FFD700;
+    color: #111;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    padding: 0.5em;
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px;
+    margin-left: 19% ;
+}
+
+
+#PgLo:hover {
+    background: #fff;
+    color: #111;
+}
+
+
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+
+    /* define a imagem de fundo */
+    background-image: url(".//fotos/bg.jpg"); /* ajuste o caminho */
+    background-size: cover;       /* cobre toda a tela */
+    background-position: center;  /* centraliza */
+    background-repeat: no-repeat; /* não repete */
+}
+
+/* Responsividade para celular */
+@media (max-width: 600px) {
+    form {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    h1, h2, h3 {
+        font-size: 1.2em;
+    }
+
+    input, select, button {
+        font-size: 14px;
+    }
+
+    .grafico{
+      padding-top: 1em;
+      padding-left: 3em;
+      padding-right: 3em;
+      font-weight: 300;
+       backdrop-filter: blur(6px);
+     box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+     border-radius: 10px;
+    }
+
+
+    #PgLog{
+       background: #FFD700;
+    color: #111;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    padding:  0.6em 6em;
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px;
+    margin-left: 4% ;
+    margin-right: 4% ;
+}
+}
+
+
+
+
+
+body{
+  font-family: sans-serif;
+}
+
+.fab{
+  position: fixed;
+  bottom:10px;
+  right:10px;
+  z-index: 100;
+}
+
+.fab button{
+  cursor: pointer;
+  width: 48px;
+  height: 48px;
+  border-radius: 30px;
+  background-color: #cb60b3;
+  border: none;
+  box-shadow: 0 1px 5px rgba(0,0,0,.4);
+  font-size: 24px;
+  color: white;
+    
+  -webkit-transition: .2s ease-out;
+  -moz-transition: .2s ease-out;
+  transition: .2s ease-out;
+}
+
+.fab button:focus{
+  outline: none;
+}
+
+.fab button.main{
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  background-color: #5b19b7;
+  right: 0;
+  bottom: 0;
+  z-index: 20;
+}
+
+.fab button.main:before{
+  content: '⏚';
+}
+
+.fab ul{
+  position:absolute;
+  bottom: 0;
+  right: 0;
+  padding:0;
+  /* padding-right:5px; */
+  margin:0;
+  list-style:none;
+  z-index:10;
+  
+  -webkit-transition: .2s ease-out;
+  -moz-transition: .2s ease-out;
+  transition: .2s ease-out;
+}
+
+.fab ul li{
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+  margin-bottom: -10%;
+  opacity: 0;
+  
+  -webkit-transition: .3s ease-out;
+  -moz-transition: .3s ease-out;
+  transition: .3s ease-out;
+}
+
+.fab ul li label{
+  margin-right:10px;
+  white-space: nowrap;
+  display: block;
+  margin-top: 10px;
+  padding: 5px 8px;
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0,0,0,.2);
+  border-radius:3px;
+  height: 18px;
+  font-size: 16px;
+  pointer-events: none;
+  opacity:0;
+  
+  -webkit-transition: .2s ease-out;
+  -moz-transition: .2s ease-out;
+  transition: .2s ease-out;
+}
+
+.fab.show button.main,
+.fab.show button.main{
+  outline: none;
+  background-color: #7716ff;
+  box-shadow: 0 3px 8px rgba(0,0,0,.5);
+ }
+ 
+.fab.show button.main:before,
+.fab.show button.main:before{
+  content: '↑';
+}
+
+.fab.show button.main + ul,
+.fab.show button.main + ul{
+  bottom: 70px;
+}
+
+.fab.show button.main + ul li,
+.fab.show button.main + ul li{
+  margin-bottom: 10px;
+  opacity: 1;
+}
+
+.fab.show button.main + ul li:hover label,
+.fab.show button.main + ul li:hover label{
+  opacity: 1;
+}

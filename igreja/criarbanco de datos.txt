@@ -1,0 +1,75 @@
+-- Cria o banco de dados
+CREATE DATABASE igreja CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+
+-- Usa o banco
+USE igreja;
+
+-- Cria a tabela de presenças
+CREATE TABLE presencas (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    culto VARCHAR(100) NOT NULL,
+    data DATE NOT NULL,
+    hora TIME NOT NULL,
+    adultos INT DEFAULT 0,
+    criancas_templo INT DEFAULT 0,
+    kids_baby INT DEFAULT 0,
+    kids INT DEFAULT 0,
+    link INT DEFAULT 0,
+    louvor INT DEFAULT 0,
+    comunicacao INT DEFAULT 0,
+    voluntarios INT DEFAULT 0,
+    pastores INT DEFAULT 0,
+    carros INT DEFAULT 0,
+    motos INT DEFAULT 0,
+    bicicletas INT DEFAULT 0
+);
+
+
+
+-- 1. Criar o banco de dados
+CREATE DATABASE IF NOT EXISTS igreja
+CHARACTER SET utf8mb4
+COLLATE utf8mb4_unicode_ci;
+
+USE igreja;
+
+-- 2. Criar a tabela presencas
+CREATE TABLE IF NOT EXISTS presencas (
+  id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  culto VARCHAR(100) DEFAULT NULL,
+  data DATE DEFAULT NULL,
+  hora TIME DEFAULT NULL,
+  adultos INT DEFAULT 0,
+  criancas_templo INT DEFAULT 0,
+  kids_baby INT DEFAULT 0,
+  kids INT DEFAULT 0,
+  link INT DEFAULT 0,
+  louvor INT DEFAULT 0,
+  comunicacao INT DEFAULT 0,
+  voluntarios INT DEFAULT 0,
+  pastor INT DEFAULT 0,
+  pregador TEXT DEFAULT NULL,
+  carros INT DEFAULT 0,
+  motos INT DEFAULT 0,
+  bicicletas INT DEFAULT 0,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%% user e senha %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+CREATE TABLE usuarios (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  username VARCHAR(50) NOT NULL UNIQUE,
+  senha_hash VARCHAR(255) NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
+senhaemail da lagoinha 
+lagoinhaflwl33
+llagoinhaflwl@gmail.com
